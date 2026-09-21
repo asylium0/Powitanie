@@ -1,6 +1,7 @@
 package com.example.powitanie;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,17 @@ public class MainActivity extends AppCompatActivity {
         btnGreet = findViewById(R.id.btnGreet);
         tvResult =  findViewById(R.id.tvResult);
 
-        
+        btnGreet.setOnClickListener(v -> greet());
+    }
+
+    private void greet() {
+        String name = etName.getText().toString().trim();
+
+        if (name.isEmpty()) {
+            Toast.makeText(this, R.string.error_empty_name, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        tvResult.setText(getString(R.string.greeting, name));
     }
 }
