@@ -20,5 +20,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        etName = findViewById(R.id.etName);
+        btnGreet = findViewById(R.id.btnGreet);
+        tvResult =  findViewById(R.id.tvResult);
+
+        
     }
 }
