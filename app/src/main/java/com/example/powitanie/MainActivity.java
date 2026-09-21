@@ -46,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
     }
     private void greet() {
         String name = etName.getText().toString().trim();
-
+        if (cbScream.isChecked()){
+            name = name.toUpperCase();
+        }
         if (name.isEmpty()) {
             Toast.makeText(this, R.string.error_empty_name, Toast.LENGTH_SHORT).show();
             return;
