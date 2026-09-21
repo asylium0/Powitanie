@@ -2,6 +2,7 @@ package com.example.powitanie;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     private Button btnGreet;
     private TextView tvResult;
 
+    private Button btnClear;
+    private CheckBox cbScream;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         etName = findViewById(R.id.etName);
         btnGreet = findViewById(R.id.btnGreet);
         tvResult =  findViewById(R.id.tvResult);
+        btnClear = findViewById(R.id.btnClear);
+        cbScream = findViewById(R.id.cbScream);
 
         btnGreet.setOnClickListener(v -> greet());
     }
