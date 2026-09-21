@@ -1,6 +1,9 @@
 package com.example.powitanie;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +13,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText etName;
+    private Button btnGreet;
+    private TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
