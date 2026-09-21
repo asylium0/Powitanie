@@ -39,8 +39,11 @@ public class MainActivity extends AppCompatActivity {
         cbScream = findViewById(R.id.cbScream);
 
         btnGreet.setOnClickListener(v -> greet());
+        btnClear.setOnClickListener(v -> clear());
     }
-
+    private void clear() {
+        etName.getText().clear();
+    }
     private void greet() {
         String name = etName.getText().toString().trim();
 
